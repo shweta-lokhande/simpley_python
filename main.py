@@ -1,11 +1,17 @@
-fib = [0, 1]
+
+num_1 = int(input("Enter first number: "))
+num_2 = int(input("enter second number: "))
 
 
-def fibonacci(n):
-    for i in range(2, n+1):
-        fib.append(fib[i-1] + fib[i-2])
-    return fib[n]
+def gcd(num1, num2):
+    while num2 != 0:
+        best = num1 % num2
+        num1 = num2
+        num2 = best
+    if num2 == 0:
+        return num1
+    # return best
 
 
-result =fibonacci(int(input("Enter the number: ")))
-print(result)
+print(gcd(num_1, num_2))
+
